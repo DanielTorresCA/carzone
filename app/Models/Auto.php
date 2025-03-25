@@ -11,7 +11,7 @@ class Auto extends Model
 
     protected $table ='autos';
 
-    protected $fillable=['motor','aceleracion','combustible','transmision', 'precio', 'descripcion', 'id_estado'];
+    protected $fillable=['marca_id','modelo_id','motor','aceleracion','combustible','transmision', 'precio', 'descripcion', 'id_estado'];
 
     public function estado(){
         return $this->belongsTo(Estado::class,'id_estado');
@@ -20,5 +20,13 @@ class Auto extends Model
     public function imagenes()
     {
         return $this->hasMany(ImgAuto::class, 'id_auto');
+    }
+
+    public function marca(){
+        return $this->belongsTo(Marca::class,'marca_id');
+    }
+
+    public function modelo(){
+        return $this->belongsTo(Modelo::class,'modelo_id');
     }
 }

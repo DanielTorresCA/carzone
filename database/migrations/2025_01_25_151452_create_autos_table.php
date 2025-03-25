@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('transmision');
             $table->integer('precio');
             $table->string('descripcion');
-            $table->foreignId('id_estado')->references('id')->on('estado')->onDelete('cascade');
+            $table->foreignId('id_estado')->references('id')->on('estado')->onDelete('cascade')->nullable();
+            $table->foreignId('marca_id')->references('id')->on('marcas')->onDelete('cascade')->nullable();
+            $table->foreignId('modelo_id')->references('id')->on('modelos')->onDelete('cascade')->nullable();
         });
     }
-
     public function down(): void
     {
         Schema::dropIfExists('autos');
