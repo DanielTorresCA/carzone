@@ -37,7 +37,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Usuarios:</h6>
-                        <a class="collapse-item" href="">Administrar</a>
+                        <a class="collapse-item" href="{{route('usuarios.index')}}">Administrar</a>
                         <a class="collapse-item" href="">Consultar Carrito</a>
                         <a class="collapse-item" href="">Historial pagos</a>
                     </div>

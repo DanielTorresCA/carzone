@@ -42,6 +42,11 @@
             @endforeach
         </tbody>
     </table>
+
+    <div>
+    <img src="{{ asset('storage/img/recurso11.png') }}" alt="Recurso 11">
+    <img src="img/recurso13.png" alt="Recurso 13">
+    </div>
 @endsection
 <script>
  document.addEventListener('DOMContentLoaded', function() {

@@ -14,6 +14,8 @@ class UserController extends Controller
     public function index()
     {
         $usuarios = User::with('roles')->paginate(10);
+        $roles= \Spatie\Permission\Models\Role::all();
+        return view('usuarios.index',compact('usuarios','roles'));
     }
 
     /**
