@@ -10,8 +10,8 @@
 <div class="row">
     <div class="container-fluid p-0">
         <div class="d-flex justify-content-center align-items-center vh-100 divinicio">
-        <img src="{{ asset('storage/img/recurso13.png') }}" alt="Recurso 11">
-            <img src="{{ asset('storage/img/recurso13.png') }}" alt="Recurso 121">
+        <img src="{{ asset('storage/img/recurso15.png') }}" alt="Recurso 11">
+            <img src="{{ asset('storage/img/recurso23.png') }}" alt="Recurso 121">
             
             <h1 class="text-white">Bienvenido</h1>
         </div>
