@@ -6,18 +6,12 @@ use App\Http\Controllers\ModeloController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/admin',function(){
-    return view('layouts.admin');
-});
-Route::get('/prueba',function(){
-    return view('prueba');
-});
+    return view('home.index');
+})->name('home');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
